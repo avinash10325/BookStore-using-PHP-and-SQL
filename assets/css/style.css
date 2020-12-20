@@ -1,0 +1,436 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+body {
+    min-width: 800px;
+    background: #eeeeee;
+    color: #000000;
+    font-size: 14px;
+}
+a {
+    color: #0051ff;
+    text-decoration: none;
+}
+a:hover {
+    color: #555555;
+}
+
+body, input, button, ul, li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.color-tomato {
+    color: #ff6347;
+}
+.header {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    color: #000000;
+    border-bottom: 1px solid #dddddd;
+    padding: 25px;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+.header > .inner-wrapper {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+.header > .inner-wrapper .side {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+.body {
+    position: relative;
+    display: block;
+    padding: 25px;
+    z-index: 500;
+    margin-top: 76px;
+}
+
+.list-section {
+    display: block;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+.list-section > h2.list-title {
+    font-size: 24px;
+    font-weight: normal;
+}
+.list-section .list-container {
+    margin-top: 14px;
+}
+.list-section .list-container .genre-lists .list {
+    display: inline-block;
+    margin-right: 25px;
+    -webkit-transition: transform .2s ease-in-out;
+    -moz-transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+}
+.list-section .list-container .genre-lists .list:nth-last-child(1) {
+    margin-right: 0;
+}
+.list-section .list-container .genre-lists .list.no-list {
+    color: #8e8e8e;
+}
+.list-section .list-container .genre-lists .list:hover, .list-section .list-container .genre-lists .list:active {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+
+.list-section .list-container .more-call {
+    margin-top: 14px;
+    display: block;
+    border-top: 1px solid #dddddd;
+    padding-top: 12px;
+}
+
+.list-section .list-container .book-lists .list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 25px 0;
+}
+.list-section .list-container .book-lists .list.no-list {
+    color: #8e8e8e;
+}
+.list-section .list-container .book-lists .list:nth-last-child(1) {
+    border-bottom: 0;
+    padding-bottom: 11px;
+}
+.list-section .list-container .book-lists .list .left {
+    width: 95px;
+    height: 169px;
+    border: 1px solid #dddd;
+    overflow: hidden;
+}
+.list-section .list-container .book-lists .list .thumbnail {
+    background-image: cover;
+    width: 100%;
+    height: 100%;
+}
+.list-section .list-container .book-lists .list .right {
+    width: 100%;
+    margin-left: 25px;
+}
+.list-section .list-container .book-lists .list .right .book-title {
+    font-size: 24px;
+    display: block;
+}
+.list-section .list-container .book-lists .list .right .book-author, .list-section .list-container .book-lists .list .right .book-published {
+    color: #555555;
+    margin-top: 5px;
+}
+.list-section .list-container .book-lists .list .right .book-author {
+    color: #555555;
+}
+.list-section .list-container .book-lists .list .right .book-comment {
+    color: #555555;
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px solid #ddd;
+}
+.list-section .list-container .book-lists .list .right .book-comment-text {
+    padding-top: 4px;
+}
+.list-section .list-container .book-lists .list .right .book-rating {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.list-section .list-container .book-lists .list .right .book-rating > .icon-star {
+    margin-right: 5px;
+}
+.list-section .list-container .book-lists .list .right .book-published {
+    display: inline-block;
+    margin-left: 14px;
+    color: #8e8e8e;
+}
+.list-section .list-container .book-lists .list .right .book-genre {
+    display: inline-block;
+    margin-left: 14px;
+    color: #8e8e8e;
+}
+.list-section .list-container .book-lists .list .right .book-actions {
+    margin-top: 14px;
+    font-size: 18px;
+    text-align: right;
+}
+.list-section .list-container .book-lists .list .right .book-actions .rent, .list-section .list-container .book-lists .list .right .book-actions .buy {
+    display: inline-block;
+    -webkit-transition: transform .2s ease-in-out;
+    -moz-transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+}
+.list-section .list-container .book-lists .list .right .book-actions .rent {
+    color: #ff6347;
+    margin-right: 25px;
+}
+.list-section .list-container .book-lists .list .right .book-actions .rent:hover {
+    color: #555555;
+}
+.list-section .list-container .book-lists .list .right .book-actions .rent:hover, .list-section .list-container .book-lists .list .right .book-actions .buy:hover {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.header-menu .menu {
+    display: inline-block;
+    margin-right: 25px;
+}
+.header-menu .menu:nth-last-child(1) {
+    margin-right: 0;
+}
+.header-menu .menu.active, .header-menu .menu.active a {
+    color: #555555;
+    font-weight: 600;
+}
+.logo {
+    max-width: 115px;
+    height: auto;
+    vertical-align: middle;
+    line-height: 0;
+}
+
+.form-container {
+    left: 50%;
+    display: block;
+    width: 35%;
+    height: auto;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.form {
+    margin-top: 25px;
+}
+.form > h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.form .text {
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    padding: 14px;
+    display: block;
+    width: 100%;
+    margin-bottom: 14px;
+    -webkit-transition: box-shadow .2s ease-in-out;
+    -moz-transition: box-shadow .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out;
+}
+.form .text:focus {
+    -webkit-box-shadow: 0 0 0 1px #0051ff;
+    -moz-box-shadow: 0 0 0 1px #0051ff;
+    box-shadow: 0 0 0 1px #0051ff;
+}
+.form .submit-button {
+    background: #0051ff;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #ff0000;
+    padding: 14px;
+    text-align: center;
+}
+
+.message {
+    padding: 25px;
+    width: 100%;
+    margin: 14px 0;
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #555555;
+}
+
+.badge {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    background: #ff6347;
+    color: #ffffff;
+    text-align: center;
+    -webkit-border-radius: 10000px;
+    -moz-border-radius: 10000px;
+    border-radius: 10000px;
+    vertical-align: middle;
+    line-height: 24px;
+    font-size: 10px;
+}
+
+.float-message {
+    display: block;
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    min-width: 35%;
+    margin: 25px;
+}
+.float-message .icon-x {
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+    margin-left: 25px;
+}
+.message-float-error {
+    padding: 25px;
+    width: 100%;
+    background: #ffffff;
+    color: #ff0000;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    vertical-align: middle;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.message-float-success {
+    padding: 25px;
+    width: 100%;
+    background: #ffffff;
+    color: #238e23;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    vertical-align: middle;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.message-float-error, .message-float-success {
+    border: 1px solid #dddddd;
+}
+
+.hidden {
+    display: none;
+}
+
+.checkout-buttons {
+    text-align: right;
+}
+.checkout-buttons > .button {
+    display: inline-block;
+    margin-right: 25px;
+}
+.checkout-buttons > .button:nth-last-child(1) {
+    margin-right: 0;
+}
+.checkout-buttons > .button.confirm-checkout {
+    background: #0051ff;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.single-line {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+
+.single-line .text {
+    margin-bottom: 0;
+    min-height: 47px;
+    margin-right: 25px;
+}
+
+.form .section {
+    display: block;
+    width: 100%;
+}
+.form .section .inner {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+
+.form .section .inner .text {
+    margin-right: 14px;
+}
+.form .section .inner .text:nth-last-child(1) {
+    margin-right: 0px;
+}
